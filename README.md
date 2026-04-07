@@ -27,7 +27,7 @@ Other memory systems try to fix this by letting AI decide what's worth rememberi
 
 <br>
 
-[Quick Start](#quick-start) · [The Palace](#the-palace) · [AAAK Dialect](#aaak-compression) · [Benchmarks](#benchmarks) · [MCP Tools](#mcp-server)
+[Quick Start](#quick-start) · [中文上手](#中文上手-onboarding) · [The Palace](#the-palace) · [AAAK Dialect](#aaak-compression) · [Benchmarks](#benchmarks) · [MCP Tools](#mcp-server)
 
 <br>
 
@@ -69,6 +69,22 @@ mempalace status
 ```
 
 Three mining modes: **projects** (code and docs), **convos** (conversation exports), and **general** (auto-classifies into decisions, preferences, milestones, problems, and emotional context). Everything stays on your machine.
+
+### 中文上手 (Onboarding)
+
+如果你想快速开始并完成第一次初始化，可以按下面做：
+
+1. 安装：`pip install mempalace`
+2. 初始化：`mempalace init <你的项目目录>`
+   - 这一步会引导你设置使用场景（工作 / 个人 / 混合）、人物、项目和 wings。
+   - 初始化完成后会在 `~/.mempalace/` 生成基础记忆文件（如 `entity_registry.yaml`、`critical_facts.md`）。
+3. 首次挖掘：
+   - 项目资料：`mempalace mine <你的项目目录>`
+   - 对话资料：`mempalace mine <对话导出目录> --mode convos`
+4. 检索历史决策：`mempalace search "你的问题"`
+5. 查看状态：`mempalace status`
+
+推荐顺序：**init → mine → search**。先让系统认识你的世界，再持续导入资料。
 
 ---
 
